@@ -3,8 +3,8 @@ document.addEventListener('DOMContentLoaded', () => {
     // Configuração da API
     // ================================
 
-    // URL do backend no HuggingFace Spaces (altere após deploy)
-    const API_BASE_URL = 'https://YOUR-USERNAME-strand-data-demo.hf.space';
+    // URL do backend no HuggingFace Spaces
+    const API_BASE_URL = 'https://madras1-stranddemo.hf.space';
 
     // Para testes locais, descomente:
     // const API_BASE_URL = 'http://localhost:7860';
