@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
+
 <body>
     <header id="navbar">
         <div class="container">
@@ -20,6 +22,7 @@
                 <ul>
                     <li><a href="#home">Home</a></li>
                     <li><a href="#services">Serviços</a></li>
+                    <li><a href="#demo">Demo</a></li>
                     <li><a href="#synthetic">Dados Sintéticos</a></li>
                     <li><a href="#about">Sobre</a></li>
                     <li><a href="#contact" class="btn-primary">Contato</a></li>
@@ -35,7 +38,8 @@
         <div class="container">
             <div class="hero-content">
                 <h2>O Futuro da IA Começa com Dados Perfeitos</h2>
-                <p>Acelere o desenvolvimento dos seus modelos com nossa plataforma líder em dados sintéticos, rotulagem precisa e datasets curados.</p>
+                <p>Acelere o desenvolvimento dos seus modelos com nossa plataforma líder em dados sintéticos, rotulagem
+                    precisa e datasets curados.</p>
                 <div class="hero-btns">
                     <a href="#synthetic" class="btn-primary">Conheça Dados Sintéticos</a>
                     <a href="#contact" class="btn-secondary">Fale Conosco</a>
@@ -70,7 +74,103 @@
                 <div class="card highlight">
                     <i class="fas fa-robot"></i>
                     <h4>Geração de Dados</h4>
-                    <p>Criação de cenários personalizados e dados para casos de borda difíceis de capturar no mundo real.</p>
+                    <p>Criação de cenários personalizados e dados para casos de borda difíceis de capturar no mundo
+                        real.</p>
+                </div>
+            </div>
+    </section>
+
+    <section id="demo" class="demo-section">
+        <div class="container">
+            <div class="section-header">
+                <h3>Experimente Agora</h3>
+                <p>Teste nossas tecnologias de IA em tempo real. Veja o poder dos nossos modelos.</p>
+            </div>
+
+            <div class="demo-container">
+                <!-- Mode Selector -->
+                <div class="demo-modes">
+                    <button class="demo-mode-btn active" data-mode="quality">
+                        <i class="fas fa-star"></i>
+                        <span>Qualidade de Texto</span>
+                    </button>
+                    <button class="demo-mode-btn" data-mode="qa">
+                        <i class="fas fa-comments"></i>
+                        <span>Q&A sobre Texto</span>
+                    </button>
+                    <button class="demo-mode-btn" data-mode="caption">
+                        <i class="fas fa-image"></i>
+                        <span>Descrição de Imagem</span>
+                    </button>
+                </div>
+
+                <!-- Demo Panels -->
+                <div class="demo-panels">
+                    <!-- Quality Classification Panel -->
+                    <div class="demo-panel active" id="panel-quality">
+                        <div class="demo-input-area">
+                            <textarea id="quality-input"
+                                placeholder="Cole ou digite um texto para analisar a qualidade...&#10;&#10;Exemplo: Este artigo apresenta uma análise detalhada dos métodos de machine learning aplicados à visão computacional."></textarea>
+                            <button class="demo-submit-btn" id="quality-submit">
+                                <i class="fas fa-bolt"></i> Analisar Qualidade
+                            </button>
+                        </div>
+                        <div class="demo-result-area" id="quality-result">
+                            <div class="result-placeholder">
+                                <i class="fas fa-flask"></i>
+                                <p>O resultado aparecerá aqui</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Q&A Panel -->
+                    <div class="demo-panel" id="panel-qa">
+                        <div class="demo-input-area">
+                            <textarea id="qa-context"
+                                placeholder="Cole o texto sobre o qual deseja fazer perguntas..."></textarea>
+                            <div class="qa-question-row">
+                                <input type="text" id="qa-question" placeholder="Sua pergunta...">
+                                <button class="demo-submit-btn" id="qa-submit">
+                                    <i class="fas fa-paper-plane"></i> Perguntar
+                                </button>
+                            </div>
+                        </div>
+                        <div class="demo-result-area" id="qa-result">
+                            <div class="result-placeholder">
+                                <i class="fas fa-robot"></i>
+                                <p>A resposta da IA aparecerá aqui</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Image Caption Panel -->
+                    <div class="demo-panel" id="panel-caption">
+                        <div class="demo-input-area">
+                            <div class="image-upload-area" id="image-drop-zone">
+                                <i class="fas fa-cloud-upload-alt"></i>
+                                <p>Arraste uma imagem ou clique para selecionar</p>
+                                <input type="file" id="image-input" accept="image/*" hidden>
+                                <img id="image-preview" src="" alt="Preview" hidden>
+                            </div>
+                            <button class="demo-submit-btn" id="caption-submit" disabled>
+                                <i class="fas fa-magic"></i> Gerar Descrição
+                            </button>
+                        </div>
+                        <div class="demo-result-area" id="caption-result">
+                            <div class="result-placeholder">
+                                <i class="fas fa-comment-dots"></i>
+                                <p>A descrição da imagem aparecerá aqui</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Powered By -->
+                <div class="demo-footer">
+                    <span>Powered by</span>
+                    <span class="tech-badge">sBERT Fine-tuned</span>
+                    <span class="tech-badge">DeepSeek V3</span>
+                    <span class="tech-badge">Qwen-VL</span>
                 </div>
             </div>
         </div>
@@ -81,12 +181,17 @@
             <div class="content-wrapper">
                 <div class="text-block">
                     <h3>Por que Dados Sintéticos?</h3>
-                    <p>Dados sintéticos são o nosso principal produto. Eles resolvem problemas de privacidade, escassez de dados e viés.</p>
+                    <p>Dados sintéticos são o nosso principal produto. Eles resolvem problemas de privacidade, escassez
+                        de dados e viés.</p>
                     <ul class="benefits-list">
-                        <li><i class="fas fa-check-circle"></i> <strong>Privacidade Total:</strong> Dados gerados artificialmente não contêm PII.</li>
-                        <li><i class="fas fa-check-circle"></i> <strong>Custo-Efetivo:</strong> Reduza drasticamente os custos de coleta e rotulagem.</li>
-                        <li><i class="fas fa-check-circle"></i> <strong>Casos de Borda:</strong> Simule cenários raros ou perigosos com segurança.</li>
-                        <li><i class="fas fa-check-circle"></i> <strong>Rotulagem Automática:</strong> Rótulos perfeitos gerados junto com os dados (Synthetic Labels).</li>
+                        <li><i class="fas fa-check-circle"></i> <strong>Privacidade Total:</strong> Dados gerados
+                            artificialmente não contêm PII.</li>
+                        <li><i class="fas fa-check-circle"></i> <strong>Custo-Efetivo:</strong> Reduza drasticamente os
+                            custos de coleta e rotulagem.</li>
+                        <li><i class="fas fa-check-circle"></i> <strong>Casos de Borda:</strong> Simule cenários raros
+                            ou perigosos com segurança.</li>
+                        <li><i class="fas fa-check-circle"></i> <strong>Rotulagem Automática:</strong> Rótulos perfeitos
+                            gerados junto com os dados (Synthetic Labels).</li>
                     </ul>
                     <a href="#contact" class="btn-primary">Solicite uma Demo</a>
                 </div>
@@ -105,7 +210,9 @@
     <section id="about" class="about">
         <div class="container">
             <h3>Sobre a Strand Data</h3>
-            <p>Somos uma startup apaixonada por dados e inteligência artificial. Nossa missão é democratizar o acesso a dados de alta qualidade, permitindo que empresas de todos os tamanhos construam IAs mais robustas e éticas.</p>
+            <p>Somos uma startup apaixonada por dados e inteligência artificial. Nossa missão é democratizar o acesso a
+                dados de alta qualidade, permitindo que empresas de todos os tamanhos construam IAs mais robustas e
+                éticas.</p>
         </div>
     </section>
 
@@ -140,7 +247,7 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-logo">Strand<span>Data</span></div>
-                <p>&copy; 2023 Strand Data. Todos os direitos reservados.</p>
+                <p>&copy; 2026 Strand Data. Todos os direitos reservados.</p>
                 <div class="social-links">
                     <a href="#"><i class="fab fa-linkedin"></i></a>
                     <a href="#"><i class="fab fa-twitter"></i></a>
@@ -152,4 +259,5 @@
 
     <script src="js/script.js"></script>
 </body>
+
 </html>
