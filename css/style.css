@@ -876,3 +876,108 @@ footer {
         display: block;
     }
 }
+
+/* Dataset Showcase */
+.dataset-showcase {
+    margin-top: 60px;
+    padding-top: 40px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.dataset-showcase h4 {
+    font-size: 1.3rem;
+    color: var(--text-color);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.dataset-showcase h4 i {
+    color: var(--primary-color);
+}
+
+.dataset-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 25px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    transition: var(--transition);
+}
+
+.dataset-card:hover {
+    border-color: var(--primary-color);
+    background: rgba(0, 242, 255, 0.05);
+    transform: translateY(-2px);
+}
+
+.dataset-info h5 {
+    font-size: 1.4rem;
+    color: var(--white);
+    margin-bottom: 8px;
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.dataset-info p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+    max-width: 600px;
+}
+
+.dataset-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.dataset-tags .tag {
+    background: rgba(112, 0, 255, 0.2);
+    color: var(--primary-color);
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    border: 1px solid rgba(112, 0, 255, 0.3);
+}
+
+.btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 24px;
+    background: transparent;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    border-radius: 8px;
+    font-weight: 600;
+    white-space: nowrap;
+    transition: var(--transition);
+}
+
+.btn-secondary:hover {
+    background: var(--primary-color);
+    color: var(--dark-bg);
+}
+
+@media (max-width: 768px) {
+    .dataset-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .dataset-info p {
+        max-width: 100%;
+    }
+
+    .dataset-tags {
+        justify-content: center;
+    }
+}
