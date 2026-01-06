@@ -58,29 +58,32 @@ header .container {
     align-items: center;
 }
 
-.logo h1 {
-    font-size: 1.8rem;
-    font-weight: 700;
-    color: var(--white);
-    letter-spacing: -1px;
+
+.logo-link {
+    display: flex;
+    align-items: center;
 }
 
-.logo span {
-    color: var(--primary-color);
-}
-
-.logo-img {
-    height: 70px;
+.strand-logo {
+    height: 48px;
+    /* Ajustado para boa visibilidade */
     width: auto;
-    display: block;
-    /* Blend mode para esconder fundo preto se houver */
-    mix-blend-mode: screen;
     transition: var(--transition);
+    display: block;
 }
 
-.logo-img:hover {
-    filter: drop-shadow(0 0 10px rgba(0, 242, 255, 0.4));
-    transform: scale(1.05);
+.strand-logo:hover {
+    filter: drop-shadow(0 0 8px rgba(0, 242, 255, 0.5));
+    transform: scale(1.02);
+}
+
+.strand-logo circle {
+    transition: all 0.4s ease;
+}
+
+.strand-logo:hover circle {
+    fill: white;
+    r: 4;
 }
 
 nav ul {
