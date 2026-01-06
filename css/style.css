@@ -70,16 +70,15 @@ header .container {
 }
 
 .logo-img {
-    height: 45px;
+    height: 40px;
     width: auto;
     display: block;
-    /* Inverte as cores para funcionar no fundo escuro */
-    filter: brightness(0) invert(1);
     transition: var(--transition);
 }
 
 .logo-img:hover {
-    filter: brightness(0) invert(1) drop-shadow(0 0 8px var(--primary-color));
+    filter: drop-shadow(0 0 8px rgba(0, 122, 255, 0.5));
+    transform: scale(1.02);
 }
 
 nav ul {
