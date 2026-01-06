@@ -69,6 +69,19 @@ header .container {
     color: var(--primary-color);
 }
 
+.logo-img {
+    height: 45px;
+    width: auto;
+    display: block;
+    /* Inverte as cores para funcionar no fundo escuro */
+    filter: brightness(0) invert(1);
+    transition: var(--transition);
+}
+
+.logo-img:hover {
+    filter: brightness(0) invert(1) drop-shadow(0 0 8px var(--primary-color));
+}
+
 nav ul {
     display: flex;
     align-items: center;
