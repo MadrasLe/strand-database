@@ -59,31 +59,22 @@ header .container {
 }
 
 
-.logo-link {
-    display: flex;
-    align-items: center;
+.logo h1 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--white);
+    letter-spacing: -1px;
 }
 
-.strand-logo {
-    height: 48px;
-    /* Ajustado para boa visibilidade */
-    width: auto;
-    transition: var(--transition);
-    display: block;
+.logo span {
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
-.strand-logo:hover {
-    filter: drop-shadow(0 0 8px rgba(0, 242, 255, 0.5));
-    transform: scale(1.02);
-}
-
-.strand-logo circle {
-    transition: all 0.4s ease;
-}
-
-.strand-logo:hover circle {
-    fill: white;
-    r: 4;
+.logo a:hover h1 {
+    text-shadow: 0 0 15px rgba(0, 242, 255, 0.5);
 }
 
 nav ul {
